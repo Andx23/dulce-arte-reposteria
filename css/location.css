@@ -1,0 +1,212 @@
+
+/* =========================================
+   DULCE ARTE - UBICACIÓN
+   ========================================= */
+
+.location {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+    padding-block: 5rem;
+}
+
+.location-heading {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.location-heading .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.location-heading h2 {
+    margin-bottom: 1rem;
+}
+
+.location-heading p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.location-information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.location-card {
+    padding: 1.6rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.location-card h3 {
+    margin: 0 0 0.8rem;
+    color: var(--color-dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+}
+
+.location-card p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.location-address {
+    margin-bottom: 1rem !important;
+}
+
+.location-map-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2rem;
+    padding: 0.85rem 1.2rem;
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.location-map-link:hover {
+    background-color: transparent;
+    color: var(--color-dark);
+}
+
+.location-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.location-hours p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.location-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.location-area {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    color: var(--color-dark);
+    font-size: 0.78rem;
+}
+
+.location-delivery-notice {
+    margin-top: 1rem !important;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-light) !important;
+    font-size: 0.82rem !important;
+}
+
+.location-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 420px;
+    padding: 2rem;
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255, 255, 255, 0.9),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #E8BFC5,
+            #F8F1E8 55%,
+            #D9B9A5
+        );
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+}
+
+.location-map-icon {
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+    font-size: 2.5rem;
+}
+
+.location-map h3 {
+    margin: 0 0 0.6rem;
+    color: var(--color-dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8rem;
+}
+
+.location-map p {
+    max-width: 320px;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-map {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .location {
+        padding-block: 3.5rem;
+    }
+
+    .location-card {
+        padding: 1.3rem;
+    }
+
+    .location-hours p {
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+
+    .location-map {
+        min-height: 280px;
+        padding: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .location-map-link {
+        transition: none;
+    }
+}

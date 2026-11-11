@@ -1,0 +1,290 @@
+
+/* ========================================
+   DULCE ARTE - SECCIÓN DE PROMOCIONES
+======================================== */
+
+.promotions {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+    padding-block: 5rem;
+}
+
+.promotions > h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.promotions-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Tarjeta principal */
+
+.promotion-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Área visual */
+
+.promotion-card-visual {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 255, 255, 0.85),
+            transparent 48%
+        ),
+        linear-gradient(
+            145deg,
+            #E8BFC5,
+            #F8F1E8 55%,
+            #D9B9A5
+        );
+}
+
+.promotion-visual-eyebrow {
+    color: var(--color-dark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.promotion-visual-title {
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.promotion-visual-description {
+    max-width: 250px;
+    padding: 0.65rem 1rem;
+    color: var(--color-dark);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(104, 70, 61, 0.15);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+}
+
+/* Contenido */
+
+.promotion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.promotion-status {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.promotion-status-active {
+    color: #28623C;
+    background-color: #E6F2E8;
+}
+
+.promotion-status-upcoming {
+    color: #77572D;
+    background-color: #F8EEDC;
+}
+
+.promotion-status-expired {
+    color: var(--color-text-light);
+    background-color: var(--color-secondary);
+}
+
+.promotion-title {
+    margin-bottom: 0.75rem;
+    font-size: clamp(2rem, 3vw, 2.7rem);
+}
+
+.promotion-description {
+    margin-bottom: 0.75rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.promotion-validity {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+}
+
+/* Precios */
+
+.promotion-prices {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.promotion-original-price {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    text-decoration: line-through;
+}
+
+.promotion-price-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.promotion-final-price {
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1;
+}
+
+.promotion-saving {
+    display: inline-block;
+    padding: 0.4rem 0.65rem;
+    color: #28623C;
+    background-color: #E6F2E8;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Información adicional */
+
+.promotion-details {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.promotion-detail {
+    margin-bottom: 0.65rem;
+    color: var(--color-text);
+    font-size: var(--font-size-small);
+    line-height: 1.7;
+}
+
+.promotion-availability {
+    margin-bottom: 0;
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Botón */
+
+.promotion-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0.85rem 1.5rem;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    transition:
+        color var(--transition-normal),
+        background-color var(--transition-normal),
+        transform var(--transition-fast);
+}
+
+.promotion-button:hover {
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.promotions-empty {
+    padding: 2rem;
+    color: var(--color-text-light);
+    text-align: center;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-md);
+}
+
+/* ========================================
+   ADAPTACIÓN A TABLETAS
+======================================== */
+
+@media (max-width: 900px) {
+    .promotion-card {
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .promotion-card-visual {
+        min-height: 380px;
+    }
+
+    .promotion-card-content {
+        padding: 2rem;
+    }
+}
+
+/* ========================================
+   ADAPTACIÓN A MÓVILES
+======================================== */
+
+@media (max-width: 650px) {
+    .promotions {
+        padding-block: 3rem;
+    }
+
+    .promotions-container {
+        margin-top: 1.75rem;
+    }
+
+    .promotion-card {
+        grid-template-columns: 1fr;
+    }
+
+    .promotion-card-visual {
+        min-height: 250px;
+    }
+
+    .promotion-card-content {
+        padding: 1.5rem;
+    }
+
+    .promotion-price-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .promotion-button {
+        width: 100%;
+    }
+}

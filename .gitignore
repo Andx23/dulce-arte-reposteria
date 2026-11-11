@@ -1,0 +1,24 @@
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales y registros
+*.log
+*.tmp
+*.bak
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Configuración local de editores
+.vscode/
+.idea/
+
+# Dependencias y compilaciones futuras
+node_modules/
+dist/
+build/

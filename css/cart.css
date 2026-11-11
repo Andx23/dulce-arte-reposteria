@@ -1,0 +1,328 @@
+
+/*
+ * DULCE ARTE - ESTILOS DEL CARRITO
+ *
+ * Archivo: css/cart.css
+ * Tecnología: CSS3
+ *
+ * Responsabilidades:
+ * - Diseñar la sección del carrito.
+ * - Presentar los productos en tarjetas.
+ * - Personalizar los controles de cantidad.
+ * - Destacar los precios y el subtotal.
+ * - Adaptar el carrito a dispositivos móviles.
+ */
+
+/* ========================================
+   SECCIÓN PRINCIPAL
+======================================== */
+
+.shopping-cart {
+    width: min(100% - 40px, 1100px);
+    margin: 100px auto;
+    padding: 60px;
+    background-color: var(--color-secondary, #F8F1E8);
+    border-radius: 18px;
+}
+
+.shopping-cart > h2 {
+    margin-bottom: 35px;
+    color: var(--color-dark, #68463D);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ========================================
+   LISTA DE PRODUCTOS
+======================================== */
+
+.cart-products {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ========================================
+   TARJETAS DE PRODUCTOS
+======================================== */
+
+.cart-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    background-color: var(--color-white, #FFFFFF);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 12px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(104, 70, 61, 0.08);
+}
+
+/* ========================================
+   INFORMACIÓN DEL PRODUCTO
+======================================== */
+
+.cart-item-content {
+    min-width: 0;
+}
+
+.cart-item-title {
+    margin-bottom: 8px;
+    color: var(--color-dark, #68463D);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.cart-item-details {
+    margin-top: 6px;
+    color: var(--color-text-light, #806F68);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ========================================
+   CONTROLES
+======================================== */
+
+.cart-item-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.cart-item-quantity-label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--color-text, #493B37);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.cart-item-quantity {
+    width: 90px;
+    min-height: 42px;
+    padding: 8px 10px;
+    color: var(--color-dark, #68463D);
+    font: inherit;
+    background-color: var(--color-background, #FFFCF9);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item-quantity:focus {
+    border-color: var(--color-dark, #68463D);
+    box-shadow: 0 0 0 3px rgba(104, 70, 61, 0.12);
+}
+
+.cart-item-remove {
+    padding: 8px 13px;
+    color: var(--color-dark, #68463D);
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid var(--color-accent, #D9B9A5);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cart-item-remove:hover {
+    color: var(--color-white, #FFFFFF);
+    background-color: var(--color-dark, #68463D);
+    border-color: var(--color-dark, #68463D);
+}
+
+/* ========================================
+   PRECIOS
+======================================== */
+
+.cart-item-price-container {
+    min-width: 125px;
+    text-align: right;
+}
+
+.cart-item-price {
+    color: var(--color-dark, #68463D);
+    font-size: 1.15rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.cart-item-quote {
+    display: block;
+    color: var(--color-dark, #68463D);
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ========================================
+   CARRITO VACÍO
+======================================== */
+
+.cart-empty {
+    padding: 45px 25px;
+    color: var(--color-text-light, #806F68);
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: center;
+    background-color: var(--color-white, #FFFFFF);
+    border: 1px dashed var(--color-accent, #D9B9A5);
+    border-radius: 12px;
+}
+
+/* ========================================
+   RESUMEN DEL CARRITO
+======================================== */
+
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 25px;
+    background-color: var(--color-white, #FFFFFF);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 12px;
+}
+
+.cart-subtotal {
+    width: 100%;
+    color: var(--color-dark, #68463D);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+.cart-quote-note {
+    width: 100%;
+    padding: 15px 18px;
+    color: var(--color-dark, #68463D);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    background-color: var(--color-secondary, #F8F1E8);
+    border-left: 3px solid var(--color-accent, #D9B9A5);
+    border-radius: 5px;
+}
+
+/* ========================================
+   ACCESIBILIDAD
+======================================== */
+
+.cart-item-remove:focus-visible {
+    outline: 3px solid var(--color-accent, #D9B9A5);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+    .shopping-cart {
+        width: min(100% - 30px, 650px);
+        margin: 70px auto;
+        padding: 35px 25px;
+    }
+
+    .cart-item {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 20px;
+    }
+
+    .cart-item-price-container {
+        grid-column: 1 / -1;
+        padding-top: 15px;
+        text-align: left;
+        border-top: 1px solid var(--color-border, #E9DDD5);
+    }
+
+    .cart-item-controls {
+        align-items: flex-end;
+    }
+}
+
+/* ========================================
+   MÓVILES
+======================================== */
+
+@media (max-width: 480px) {
+    .shopping-cart {
+        width: calc(100% - 24px);
+        margin: 50px auto;
+        padding: 30px 16px;
+        border-radius: 12px;
+    }
+
+    .shopping-cart > h2 {
+        margin-bottom: 25px;
+    }
+
+    .cart-products {
+        gap: 14px;
+    }
+
+    .cart-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 20px 16px;
+    }
+
+    .cart-item-title {
+        font-size: 1.65rem;
+    }
+
+    .cart-item-controls {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .cart-item-price-container {
+        grid-column: auto;
+        padding-top: 14px;
+    }
+
+    .cart-summary {
+        padding: 20px 16px;
+    }
+
+    .cart-subtotal {
+        font-size: 1.1rem;
+    }
+
+    .cart-quote-note {
+        font-size: 0.82rem;
+    }
+}
+
+/* ========================================
+   MOVIMIENTO REDUCIDO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .cart-item,
+    .cart-item-remove,
+    .cart-item-quantity {
+        transition: none;
+    }
+
+    .cart-item:hover {
+        transform: none;
+    }
+}

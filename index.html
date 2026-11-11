@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Dulce Arte, repostería artesanal. Descubre nuestro catálogo de productos y personaliza tus pedidos."
+    >
+
+    <title>Dulce Arte | Repostería Artesanal</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/product-modal.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/order-summary.css">
+    <link rel="stylesheet" href="css/promotions.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/location.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- DATOS Y FUNCIONALIDADES -->
+    <!-- Mantener este orden por las dependencias entre archivos. -->
+    <script src="js/products.js" defer></script>
+    <script src="js/promotions.js" defer></script>
+    <script src="js/product-options.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/order.js" defer></script>
+    <script src="js/order-summary.js" defer></script>
+    <script src="js/product-modal.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/footer.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a href="#inicio" class="logo" aria-label="Dulce Arte, ir al inicio">
+            <img
+                src="assets/images/logo-dulce-arte.png"
+                alt="Dulce Arte - Repostería Artesanal"
+            >
+        </a>
+
+        <nav class="navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
+
+        <a href="#carrito" class="cart-link">
+            <span>Carrito</span>
+        </a>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+                <span class="hero-eyebrow">
+                    DULCE ARTE · REPOSTERÍA ARTESANAL
+                </span>
+
+                <h1>Un toque dulce para cada ocasión</h1>
+
+                <p>
+                    Descubre nuestra selección de tortas, postres y
+                    creaciones artesanales. Encuentra algo especial
+                    para compartir y disfrutar.
+                </p>
+
+                <a href="#catalogo" class="hero-button">
+                    Explorar catálogo
+                </a>
+            </div>
+
+            <div
+                class="hero-image"
+                role="img"
+                aria-label="Espacio reservado para una fotografía de los productos de Dulce Arte"
+            >
+                <span>Fotografía principal pendiente</span>
+            </div>
+
+        </section>
+
+        <!-- PRODUCTOS DESTACADOS -->
+        <section id="destacados" class="featured-products">
+
+            <div class="featured-heading">
+                <span class="section-eyebrow">
+                    NUESTRAS RECOMENDACIONES
+                </span>
+
+                <h2>Los favoritos de Dulce Arte</h2>
+
+                <p>
+                    Descubre algunas de nuestras creaciones favoritas,
+                    preparadas para hacer especial cada ocasión.
+                </p>
+            </div>
+
+            <!-- PRODUCTO ESTRELLA -->
+            <article class="star-product">
+
+                <div class="star-product-image">
+                    <span>Fotografía de la torta pendiente</span>
+                </div>
+
+                <div class="star-product-content">
+
+                    <span class="product-label">
+                        PRODUCTO ESTRELLA
+                    </span>
+
+                    <h3>Torta de chocolate clásica</h3>
+
+                    <p>
+                        Bizcocho húmedo de chocolate con relleno cremoso.
+                        Una de nuestras opciones favoritas para compartir.
+                    </p>
+
+                    <span class="product-price">
+                        Desde $60.000
+                    </span>
+
+                    <a
+                        href="https://wa.me/573004567890?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20la%20Torta%20de%20chocolate%20cl%C3%A1sica%20de%20Dulce%20Arte.%20Me%20gustar%C3%ADa%20conocer%20las%20opciones%20de%20tama%C3%B1o%20y%20personalizaci%C3%B3n."
+                        class="whatsapp-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Pedir por WhatsApp
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- PRODUCTOS SECUNDARIOS -->
+            <div class="featured-products-container">
+
+                <article class="featured-card">
+                    <div class="featured-card-image">
+                        <span>Fotografía pendiente</span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>Torta Red Velvet</h3>
+
+                        <p>
+                            Bizcocho Red Velvet con una suave crema de queso.
+                        </p>
+
+                        <span class="product-price">
+                            Desde $70.000
+                        </span>
+
+                        <a href="#catalogo" class="product-link">
+                            Ver producto
+                        </a>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <div class="featured-card-image">
+                        <span>Fotografía pendiente</span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>Cheesecake de frutos rojos</h3>
+
+                        <p>
+                            Cheesecake cremoso con salsa de frutos rojos.
+                        </p>
+
+                        <span class="product-price">
+                            Desde $45.000
+                        </span>
+
+                        <a href="#catalogo" class="product-link">
+                            Ver producto
+                        </a>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <div class="featured-card-image">
+                        <span>Fotografía pendiente</span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>Cupcakes personalizados</h3>
+
+                        <p>
+                            Cupcakes con decoración básica o temática.
+                        </p>
+
+                        <span class="product-price">
+                            Desde $30.000
+                        </span>
+
+                        <a href="#catalogo" class="product-link">
+                            Ver producto
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- CATÁLOGO -->
+        <section id="catalogo" class="catalog">
+
+            <h2>Nuestro catálogo</h2>
+
+            <p>Explora nuestros productos de repostería.</p>
+
+            <nav class="catalog-filters" aria-label="Filtrar productos">
+                <ul>
+                    <li>
+                        <button type="button" data-category="all">
+                            Todos
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="tortas">
+                            Tortas
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="cheesecakes">
+                            Cheesecakes
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="cupcakes">
+                            Cupcakes
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="brownies">
+                            Brownies
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="galletas">
+                            Galletas
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="cake-pops">
+                            Cake pops
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="postres">
+                            Postres
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" data-category="combos">
+                            Combos y cajas de regalo
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="catalog-products">
+                <!-- Productos generados con JavaScript -->
+            </div>
+
+        </section>
+
+        <!-- PROMOCIONES -->
+        <section id="promociones" class="promotions">
+            <h2>Promociones</h2>
+
+            <div class="promotions-container">
+                <!-- Promociones generadas con JavaScript -->
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN DEL NEGOCIO -->
+        <section id="nosotros" class="about">
+
+            <div class="about-heading">
+                <span class="section-eyebrow">
+                    NUESTRA HISTORIA
+                </span>
+
+                <h2>Sobre nosotros</h2>
+
+                <p>
+                    Conoce la historia detrás de cada creación de Dulce Arte.
+                </p>
+            </div>
+
+            <div class="about-content">
+
+                <div
+                    class="about-image"
+                    role="img"
+                    aria-label="Espacio reservado para una fotografía del emprendimiento Dulce Arte"
+                >
+                    <span>Fotografía del emprendimiento pendiente</span>
+                </div>
+
+                <div class="about-story">
+
+                    <span class="about-year">
+                        Desde 2022
+                    </span>
+
+                    <h3>Una historia hecha con dedicación y cariño</h3>
+
+                    <p>
+                        Dulce Arte nació en 2022 como una iniciativa para
+                        compartir preparaciones de repostería con familiares
+                        y amigos. Lo que comenzó como una actividad cercana
+                        fue creciendo gracias a las recomendaciones de quienes
+                        disfrutaban nuestras creaciones.
+                    </p>
+
+                    <p>
+                        Hoy nos especializamos en tortas personalizadas,
+                        cupcakes, cheesecakes y postres artesanales. Cada
+                        preparación se elabora bajo pedido, cuidando su
+                        presentación y adaptándose a las preferencias y
+                        ocasiones especiales de nuestros clientes.
+                    </p>
+
+                    <p>
+                        Nos gusta convertir las ideas de cada persona en
+                        creaciones especiales, combinando creatividad,
+                        dedicación y atención a los detalles.
+                    </p>
+
+                    <div class="about-specialties">
+
+                        <article class="about-specialty">
+                            <h4>Tortas personalizadas</h4>
+                            <p>
+                                Creaciones adaptadas a diferentes celebraciones
+                                y preferencias.
+                            </p>
+                        </article>
+
+                        <article class="about-specialty">
+                            <h4>Cupcakes</h4>
+                            <p>
+                                Preparaciones con opciones de decoración
+                                básica o temática.
+                            </p>
+                        </article>
+
+                        <article class="about-specialty">
+                            <h4>Cheesecakes</h4>
+                            <p>
+                                Postres artesanales para compartir
+                                en ocasiones especiales.
+                            </p>
+                        </article>
+
+                        <article class="about-specialty">
+                            <h4>Postres artesanales</h4>
+                            <p>
+                                Diferentes preparaciones elaboradas
+                                bajo pedido.
+                            </p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-philosophy">
+                <p>
+                    «Creemos que cada celebración merece algo especial,
+                    preparado con dedicación, creatividad y cariño».
+                </p>
+            </div>
+
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="testimonials">
+
+            <div class="testimonials-heading">
+                <span class="section-eyebrow">
+                    EXPERIENCIAS DULCE ARTE
+                </span>
+
+                <h2>Lo que dicen nuestros clientes</h2>
+
+                <p>
+                    Cada opinión nos inspira a seguir creando
+                    momentos especiales.
+                </p>
+            </div>
+
+            <div class="testimonials-container">
+
+                <article class="testimonial-card">
+                    <div>
+                        <span class="testimonial-quote" aria-hidden="true">“</span>
+                        <p class="testimonial-text">
+                            La torta estaba deliciosa, la decoración quedó
+                            exactamente como la quería.
+                        </p>
+                    </div>
+                    <p class="testimonial-author">Laura M.</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <div>
+                        <span class="testimonial-quote" aria-hidden="true">“</span>
+                        <p class="testimonial-text">
+                            Los cupcakes estaban hermosos y llegaron
+                            en perfecto estado.
+                        </p>
+                    </div>
+                    <p class="testimonial-author">Camila R.</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <div>
+                        <span class="testimonial-quote" aria-hidden="true">“</span>
+                        <p class="testimonial-text">
+                            Me encantó la presentación y el sabor.
+                            Definitivamente volvería a comprar.
+                        </p>
+                    </div>
+                    <p class="testimonial-author">Andrea P.</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <div>
+                        <span class="testimonial-quote" aria-hidden="true">“</span>
+                        <p class="testimonial-text">
+                            Todo estuvo muy rico y la atención
+                            fue excelente.
+                        </p>
+                    </div>
+                    <p class="testimonial-author">Daniela G.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section id="ubicacion" class="location">
+
+            <div class="location-heading">
+                <span class="section-eyebrow">
+                    VISÍTANOS
+                </span>
+
+                <h2>Encuéntranos</h2>
+
+                <p>
+                    Estamos en Modelia, Bogotá. Puedes recoger tu pedido
+                    en nuestro punto de atención o consultar las opciones
+                    de domicilio disponibles.
+                </p>
+            </div>
+
+            <div class="location-content">
+
+                <div class="location-information">
+
+                    <article class="location-card">
+                        <h3>Punto de recogida</h3>
+
+                        <p class="location-address">
+                            Calle 24C # 82-35<br>
+                            Barrio Modelia<br>
+                            Bogotá D.C., Cundinamarca<br>
+                            Código postal: 110931<br>
+                            Colombia
+                        </p>
+
+                        <p>
+                            Los pedidos se preparan bajo solicitud.
+                            Coordina previamente la recogida con Dulce Arte.
+                        </p>
+
+                        <a
+                            class="location-map-link"
+                            href="https://www.google.com/maps/search/?api=1&query=Calle%2024C%20%2382-35%2C%20Modelia%2C%20Bogot%C3%A1%2C%20Colombia"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Consultar en Google Maps
+                        </a>
+                    </article>
+
+                    <article class="location-card">
+                        <h3>Horario de atención</h3>
+
+                        <div class="location-hours">
+                            <p>
+                                <strong>Lunes a sábado</strong>
+                                <span>9:00 a. m. – 6:00 p. m.</span>
+                            </p>
+
+                            <p>
+                                <strong>Domingos</strong>
+                                <span>No informado</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="location-card">
+                        <h3>Zonas de domicilio</h3>
+
+                        <p>
+                            Realizamos entregas en Modelia, Hayuelos,
+                            Normandía, Fontibón y sectores cercanos.
+                        </p>
+
+                        <div class="location-areas">
+                            <span class="location-area">Modelia</span>
+                            <span class="location-area">Hayuelos</span>
+                            <span class="location-area">Normandía</span>
+                            <span class="location-area">Fontibón</span>
+                            <span class="location-area">Sectores cercanos</span>
+                        </div>
+
+                        <p class="location-delivery-notice">
+                            El costo del domicilio depende de la zona
+                            y será confirmado por Dulce Arte antes
+                            de confirmar el pedido.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="location-map">
+
+                    <span class="location-map-icon" aria-hidden="true">
+                        &#9906;
+                    </span>
+
+                    <h3>Dulce Arte en Modelia</h3>
+
+                    <p>
+                        Calle 24C # 82-35, Modelia, Bogotá D.C.
+                    </p>
+
+                    <a
+                        class="location-map-link"
+                        href="https://www.google.com/maps/search/?api=1&query=Calle%2024C%20%2382-35%2C%20Modelia%2C%20Bogot%C3%A1%2C%20Colombia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir mapa
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CARRITO -->
+        <section id="carrito" class="shopping-cart">
+            <h2>Tu carrito</h2>
+
+            <div class="cart-products">
+                <!-- Productos agregados al carrito -->
+            </div>
+
+            <div class="cart-summary">
+                <!-- Resumen de compra -->
+            </div>
+        </section>
+
+        <!-- DATOS DEL PEDIDO -->
+        <section id="pedido" class="order">
+            <h2>Datos de tu pedido</h2>
+
+            <div class="order-content">
+                <form id="order-form" class="order-form">
+
+                    <div class="order-field">
+                        <label for="customer-name">
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customer-name"
+                            name="customerName"
+                            autocomplete="name"
+                            minlength="3"
+                            maxlength="100"
+                            placeholder="Escribe tu nombre completo"
+                            required
+                        >
+                    </div>
+
+                    <div class="order-field">
+                        <label for="customer-phone">
+                            Teléfono de contacto
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            name="customerPhone"
+                            autocomplete="tel"
+                            minlength="7"
+                            maxlength="20"
+                            pattern="[\d+\(\)\s\-]{7,20}"
+                            placeholder="Ej. 300 123 4567"
+                            aria-describedby="phone-help"
+                            required
+                        >
+
+                        <small id="phone-help">
+                            Incluye un número en el que podamos contactarte.
+                        </small>
+                    </div>
+
+                    <fieldset class="order-delivery">
+                        <legend>Método de entrega</legend>
+
+                        <label class="delivery-option">
+                            <input
+                                type="radio"
+                                name="deliveryMethod"
+                                value="pickup"
+                                required
+                            >
+                            <span>Recoger en el local</span>
+                        </label>
+
+                        <label class="delivery-option">
+                            <input
+                                type="radio"
+                                name="deliveryMethod"
+                                value="delivery"
+                                required
+                            >
+                            <span>Solicitar domicilio</span>
+                        </label>
+                    </fieldset>
+
+                    <div
+                        id="delivery-fields"
+                        class="delivery-fields"
+                        hidden
+                    >
+                        <div class="order-field">
+                            <label for="customer-address">
+                                Dirección de entrega
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customer-address"
+                                name="customerAddress"
+                                autocomplete="street-address"
+                                maxlength="150"
+                                placeholder="Ej. Calle 10 # 20-30"
+                                disabled
+                            >
+                        </div>
+
+                        <div class="order-field">
+                            <label for="customer-neighborhood">
+                                Barrio
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customer-neighborhood"
+                                name="customerNeighborhood"
+                                autocomplete="address-level3"
+                                maxlength="100"
+                                placeholder="Escribe tu barrio"
+                                disabled
+                            >
+                        </div>
+
+                        <div class="order-field">
+                            <label for="customer-reference">
+                                Punto de referencia
+                                <span>(opcional)</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customer-reference"
+                                name="customerReference"
+                                maxlength="150"
+                                placeholder="Ej. Casa de fachada blanca"
+                                disabled
+                            >
+                        </div>
+
+                        <p class="delivery-notice">
+                            El costo del domicilio depende de la zona
+                            y será confirmado por Dulce Arte antes de
+                            confirmar el pedido.
+                        </p>
+                    </div>
+
+                    <div class="order-field">
+                        <label for="order-notes">
+                            Observaciones
+                            <span>(opcional)</span>
+                        </label>
+
+                        <textarea
+                            id="order-notes"
+                            name="orderNotes"
+                            rows="4"
+                            maxlength="500"
+                            placeholder="¿Tienes alguna indicación adicional para tu pedido?"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="order-submit">
+                        Guardar datos del pedido
+                    </button>
+
+                    <p
+                        id="order-form-message"
+                        class="order-form-message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- RESUMEN FINAL DEL PEDIDO -->
+        <section id="resumen" class="order-summary">
+
+            <div class="order-summary-heading">
+                <span class="section-eyebrow">
+                    ÚLTIMO PASO
+                </span>
+
+                <h2>Resumen de tu pedido</h2>
+
+                <p>
+                    Revisa los productos y tus datos antes de enviar
+                    la solicitud a Dulce Arte.
+                </p>
+            </div>
+
+            <div class="order-summary-content">
+
+                <div class="summary-products">
+                    <h3>Productos seleccionados</h3>
+
+                    <div
+                        id="summary-products-list"
+                        class="summary-products-list"
+                    >
+                        <p class="summary-placeholder">
+                            El resumen de tus productos aparecerá aquí.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="summary-customer">
+                    <h3>Datos del cliente</h3>
+
+                    <div
+                        id="summary-customer-details"
+                        class="summary-customer-details"
+                    >
+                        <p class="summary-placeholder">
+                            Guarda tus datos para mostrarlos en el resumen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="summary-totals">
+
+                    <div class="summary-subtotal">
+                        <span>Subtotal</span>
+
+                        <strong id="summary-subtotal-value">
+                            $0
+                        </strong>
+                    </div>
+
+                    <p
+                        id="summary-quote-notice"
+                        class="summary-quote-notice"
+                        hidden
+                    >
+                        Algunos productos requieren cotización.
+                        Su precio final será confirmado por Dulce Arte.
+                    </p>
+
+                    <p
+                        id="summary-delivery-notice"
+                        class="summary-delivery-notice"
+                        hidden
+                    >
+                        El costo del domicilio está pendiente de confirmación.
+                    </p>
+
+                    <p class="summary-disclaimer">
+                        Este resumen corresponde a una solicitud de pedido.
+                        La disponibilidad, el precio final de los productos
+                        por cotizar y el domicilio deberán ser confirmados
+                        por Dulce Arte.
+                    </p>
+
+                </div>
+
+                <div class="summary-actions">
+
+                    <button
+                        type="button"
+                        id="send-whatsapp-order"
+                        class="summary-whatsapp-button"
+                        disabled
+                    >
+                        Enviar solicitud por WhatsApp
+                    </button>
+
+                    <p
+                        id="summary-message"
+                        class="summary-message"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        Completa tu pedido y guarda tus datos para continuar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-main">
+
+                <!-- IDENTIDAD DEL NEGOCIO -->
+                <div class="footer-brand">
+
+                    <a
+                        href="#inicio"
+                        class="footer-logo"
+                        aria-label="Dulce Arte, volver al inicio"
+                    >
+                        <img
+                            src="assets/images/logo-dulce-arte.png"
+                            alt="Dulce Arte - Repostería Artesanal"
+                        >
+                    </a>
+
+                    <p class="footer-description">
+                        Creamos tortas, cupcakes, cheesecakes y postres
+                        artesanales para acompañar tus momentos especiales.
+                        Cada preparación está hecha con dedicación y cariño.
+                    </p>
+
+                </div>
+
+                <!-- NAVEGACIÓN -->
+                <div class="footer-column">
+
+                    <h3>Explora</h3>
+
+                    <nav class="footer-links" aria-label="Navegación del pie de página">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#catalogo">Catálogo</a>
+                        <a href="#promociones">Promociones</a>
+                        <a href="#nosotros">Nosotros</a>
+                        <a href="#testimonios">Testimonios</a>
+                        <a href="#ubicacion">Ubicación</a>
+                    </nav>
+
+                </div>
+
+                <!-- CONTACTO -->
+                <div class="footer-column">
+
+                    <h3>Contacto</h3>
+
+                    <div class="footer-contact">
+
+                        <p>
+                            Modelia, Bogotá D.C.<br>
+                            Calle 24C # 82-35
+                        </p>
+
+                        <a
+                            href="https://wa.me/573004567890"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="footer-whatsapp"
+                        >
+                            Contactar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- INFORMACIÓN INFERIOR -->
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="current-year"></span>
+                    Dulce Arte. Todos los derechos reservados.
+                </p>
+
+                <p>
+                    Repostería artesanal hecha con cariño.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

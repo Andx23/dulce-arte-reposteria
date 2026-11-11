@@ -1,0 +1,366 @@
+
+/*
+ * DULCE ARTE - ESTILOS DEL FORMULARIO DE PEDIDO
+ *
+ * Archivo: css/order.css
+ * Tecnología: CSS3
+ *
+ * Responsabilidades:
+ * - Diseñar la sección de datos del pedido.
+ * - Organizar los campos del formulario.
+ * - Personalizar las opciones de entrega.
+ * - Mostrar los campos de domicilio.
+ * - Adaptar el formulario a dispositivos móviles.
+ */
+
+/* ========================================
+   SECCIÓN PRINCIPAL
+======================================== */
+
+.order {
+    width: min(100% - 40px, 900px);
+    margin: 100px auto;
+}
+
+.order > h2 {
+    margin-bottom: 35px;
+    color: var(--color-dark, #68463D);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+.order-content {
+    padding: 40px;
+    background-color: var(--color-secondary, #F8F1E8);
+    border-radius: 18px;
+}
+
+/* ========================================
+   FORMULARIO
+======================================== */
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    background-color: var(--color-white, #FFFFFF);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 12px;
+}
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.order-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.order-field label {
+    color: var(--color-dark, #68463D);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.order-field label span {
+    color: var(--color-text-light, #806F68);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.order-field input,
+.order-field textarea {
+    width: 100%;
+    padding: 13px 15px;
+    color: var(--color-text, #493B37);
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    background-color: var(--color-background, #FFFCF9);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-field input {
+    min-height: 48px;
+}
+
+.order-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.order-field input::placeholder,
+.order-field textarea::placeholder {
+    color: #A89991;
+}
+
+.order-field input:focus,
+.order-field textarea:focus {
+    border-color: var(--color-dark, #68463D);
+    box-shadow: 0 0 0 3px rgba(104, 70, 61, 0.12);
+}
+
+.order-field small {
+    color: var(--color-text-light, #806F68);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* ========================================
+   MÉTODO DE ENTREGA
+======================================== */
+
+.order-delivery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 22px;
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 9px;
+}
+
+.order-delivery legend {
+    padding: 0 8px;
+    color: var(--color-dark, #68463D);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.delivery-option {
+    display: flex;
+    flex: 1 1 220px;
+    align-items: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 15px;
+    color: var(--color-text, #493B37);
+    background-color: var(--color-background, #FFFCF9);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.delivery-option:hover {
+    background-color: var(--color-secondary, #F8F1E8);
+    border-color: var(--color-accent, #D9B9A5);
+}
+
+.delivery-option:has(input:checked) {
+    background-color: var(--color-secondary, #F8F1E8);
+    border-color: var(--color-dark, #68463D);
+}
+
+.delivery-option input {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: var(--color-dark, #68463D);
+    cursor: pointer;
+}
+
+.delivery-option span {
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+/* ========================================
+   CAMPOS DE DOMICILIO
+======================================== */
+
+.delivery-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    padding: 25px;
+    background-color: var(--color-background, #FFFCF9);
+    border: 1px solid var(--color-border, #E9DDD5);
+    border-radius: 9px;
+}
+
+/* Garantiza que el atributo hidden siempre oculte el bloque. */
+.delivery-fields[hidden] {
+    display: none;
+}
+
+.delivery-fields .order-field:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.delivery-notice {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 15px 18px;
+    color: var(--color-dark, #68463D);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    background-color: var(--color-secondary, #F8F1E8);
+    border-left: 3px solid var(--color-accent, #D9B9A5);
+    border-radius: 5px;
+}
+
+/* ========================================
+   BOTÓN DE ENVÍO
+======================================== */
+
+.order-submit {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 22px;
+    color: var(--color-white, #FFFFFF);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: var(--color-dark, #68463D);
+    border: 1px solid var(--color-dark, #68463D);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.order-submit:hover {
+    background-color: #50352E;
+    transform: translateY(-1px);
+}
+
+.order-submit:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   MENSAJES DEL FORMULARIO
+======================================== */
+
+.order-form-message {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.order-form-message:empty {
+    display: none;
+}
+
+.order-form-message.is-success {
+    padding: 15px 18px;
+    color: #356B4A;
+    background-color: #EDF5EF;
+    border-left: 3px solid #6A9D79;
+    border-radius: 5px;
+}
+
+.order-form-message.is-error {
+    padding: 15px 18px;
+    color: #963E3E;
+    background-color: #FAEEEE;
+    border-left: 3px solid #B65B5B;
+    border-radius: 5px;
+}
+
+/* ========================================
+   ACCESIBILIDAD
+======================================== */
+
+.order-submit:focus-visible,
+.delivery-option:focus-within {
+    outline: 3px solid var(--color-accent, #D9B9A5);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+    .order {
+        width: min(100% - 30px, 650px);
+        margin: 70px auto;
+    }
+
+    .order-content {
+        padding: 25px;
+    }
+
+    .order-form {
+        padding: 25px;
+    }
+
+    .delivery-fields {
+        gap: 18px;
+    }
+}
+
+/* ========================================
+   MÓVILES
+======================================== */
+
+@media (max-width: 520px) {
+    .order {
+        width: calc(100% - 24px);
+        margin: 50px auto;
+    }
+
+    .order > h2 {
+        margin-bottom: 25px;
+    }
+
+    .order-content {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .order-form {
+        gap: 22px;
+        padding: 20px 15px;
+    }
+
+    .order-delivery {
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 12px;
+    }
+
+    .delivery-option {
+        flex-basis: auto;
+    }
+
+    .delivery-fields {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 18px 14px;
+    }
+
+    .delivery-fields .order-field:nth-child(3),
+    .delivery-notice {
+        grid-column: auto;
+    }
+
+    .order-submit {
+        font-size: 0.88rem;
+    }
+}
+
+/* ========================================
+   MOVIMIENTO REDUCIDO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .order-field input,
+    .order-field textarea,
+    .delivery-option,
+    .order-submit {
+        transition: none;
+    }
+
+    .order-submit:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,300 @@
+
+/*
+ * DULCE ARTE - ESTILOS DEL RESUMEN DEL PEDIDO
+ *
+ * Archivo: css/order-summary.css
+ */
+
+/* ========================================
+   1. SECCIÓN PRINCIPAL
+======================================== */
+
+.order-summary {
+    width: min(100% - 2rem, 1000px);
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.order-summary-heading {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.order-summary-heading h2 {
+    margin-bottom: 1rem;
+}
+
+.order-summary-heading p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+/* ========================================
+   2. CONTENEDOR DEL RESUMEN
+======================================== */
+
+.order-summary-content {
+    display: grid;
+    gap: 1.5rem;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.summary-products,
+.summary-customer,
+.summary-totals {
+    padding: 1.75rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.summary-products h3,
+.summary-customer h3 {
+    margin-bottom: 1.25rem;
+    font-size: 1.8rem;
+}
+
+/* ========================================
+   3. PRODUCTOS
+======================================== */
+
+.summary-products-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.summary-product-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.summary-product-item:first-child {
+    padding-top: 0;
+}
+
+.summary-product-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.summary-product-information {
+    min-width: 0;
+}
+
+.summary-product-name {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.summary-product-detail,
+.summary-product-quantity {
+    margin-bottom: 0.35rem;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    line-height: 1.7;
+}
+
+.summary-product-quantity {
+    margin-top: 0.5rem;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.summary-product-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    color: var(--color-dark);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.summary-product-price strong {
+    font-size: 1rem;
+}
+
+.summary-product-price small {
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    white-space: normal;
+}
+
+/* ========================================
+   4. DATOS DEL CLIENTE
+======================================== */
+
+.summary-customer-details {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.summary-customer-detail {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    overflow-wrap: anywhere;
+}
+
+.summary-customer-detail strong {
+    color: var(--color-dark);
+}
+
+/* ========================================
+   5. TOTALES Y AVISOS
+======================================== */
+
+.summary-totals {
+    display: grid;
+    gap: 1rem;
+}
+
+.summary-subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-dark);
+    font-size: 1.1rem;
+}
+
+.summary-subtotal strong {
+    font-size: 1.25rem;
+}
+
+.summary-quote-notice,
+.summary-delivery-notice {
+    margin: 0;
+    padding: 1rem;
+    color: var(--color-dark);
+    background-color: var(--color-secondary);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-small);
+    line-height: 1.7;
+}
+
+.summary-disclaimer {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+/* ========================================
+   6. BOTÓN DE WHATSAPP
+======================================== */
+
+.summary-actions {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.summary-whatsapp-button {
+    width: min(100%, 420px);
+    min-height: 54px;
+    padding: 0.9rem 1.5rem;
+    color: var(--color-white);
+    background-color: #287C4A;
+    border: 1px solid #287C4A;
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    transition:
+        background-color var(--transition-normal),
+        transform var(--transition-fast);
+}
+
+.summary-whatsapp-button:hover:not(:disabled) {
+    background-color: #1F633B;
+    transform: translateY(-2px);
+}
+
+.summary-whatsapp-button:disabled {
+    color: #776D68;
+    background-color: #E8E1DC;
+    border-color: #E8E1DC;
+    cursor: not-allowed;
+}
+
+.summary-message {
+    max-width: 600px;
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    line-height: 1.7;
+}
+
+/* ========================================
+   7. ESTADOS VACÍOS
+======================================== */
+
+.summary-placeholder {
+    margin: 0;
+    padding: 1rem;
+    color: var(--color-text-light);
+    background-color: var(--color-background);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-small);
+    text-align: center;
+}
+
+/* ========================================
+   8. RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+    .order-summary {
+        padding: 3rem 0;
+    }
+
+    .order-summary-content {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .summary-products,
+    .summary-customer,
+    .summary-totals {
+        padding: 1.25rem;
+    }
+
+    .summary-product-item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .summary-product-price {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .summary-subtotal {
+        align-items: flex-start;
+        font-size: 0.95rem;
+    }
+
+    .summary-subtotal strong {
+        font-size: 1.05rem;
+    }
+
+    .summary-whatsapp-button {
+        width: 100%;
+    }
+}
